@@ -35,6 +35,13 @@ export const restricQualifyingResults = (fullQualifyingResults) => {
             }
         } = fullQualifyingResult;
         
-        return ({ number, position, url, familyName, givenName, nationality })
+        return ({ 
+            number, 
+            position, 
+            url, 
+            familyName, 
+            givenName, 
+            nationality 
+        })
     });
 }
