@@ -2,7 +2,8 @@
 
 .ResultItem {
     margin:5px;
-    width: 550px;
+    margin-left:20px;
+    width: 800px;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 4fr;
@@ -21,6 +22,7 @@
     font-size: 30pt;
     font-weight: bold;
     color:white;
+    margin-left:250px;
     border-radius: 3px;
     margin-right:10px;
     grid-row: span 3;
@@ -46,7 +48,7 @@
 }
 
 
-a, span {
+.hyperlink, .icon {
     margin-right: 10px;
     margin-left: 5px;
     display:flex;
@@ -54,12 +56,12 @@ a, span {
     align-items: center;
 }
 
-a {
+.hyperlink {
     text-decoration: none;
     outline: 0;
     color:black
 }
 
-a:hover {
+.hyperlink:hover {
     text-shadow:0 0 1pt white;
 }

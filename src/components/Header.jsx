@@ -1,15 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import * as styles from './Header.css';
+import * as styles from './styles.css';
 
-const Header = () => {
+const navigationBar = () => {
     return (
-        <div className={styles.Header}>
-            <li><Link to="/home"> Home </Link></li>
-            <li><Link to="/qualifyingresults"> Qualifying Results </Link></li>
-            <li><Link to="/driversinformation"> Drivers Information </Link> </li>
+        <div className={styles.navigationBar}>
+            <li ><Link className={styles.navBarItem} to="/home"> Home </Link></li>
+            <li ><Link className={styles.navBarItem} to="/qualifyingresults"> Qualifying Results </Link></li>
+            <li ><Link className={styles.navBarItem} to="/driversinformation"> Drivers Information </Link> </li>
         </div>
     )
 }
 
-export default Header;
+export default navigationBar;

@@ -20,7 +20,17 @@ module.exports = {
         }
       },
       {
-        test: /\.css?$/, use: ['style-loader', { loader: 'css-loader', options: { modules: true, importLoaders: 1, localIdentName: '[sha1:hash:hex:4]' } }]
+        test: /\.css?$/,
+        use: [
+          'style-loader',
+          { loader: 'css-loader',
+            options: {
+              modules: true, 
+              importLoaders: 1, 
+              localIdentName: '[sha1:hash:hex:4]' 
+            }
+          }
+        ]
 }
     ]
   },

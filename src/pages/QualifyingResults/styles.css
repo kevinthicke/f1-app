@@ -2,14 +2,15 @@
 
 .RaceHeader {
     font-family: 'Oswald', sans-serif;
-    font-size: 24pt;
+    font-size: 30pt;
     display:flex;
     justify-content: center;
-    margin-top:15px;
-    margin-bottom: 30px;
+    margin-top:30px;
+    margin-bottom: 60px;
 }
 
 .QualifyingResults {
+    width: 80%;
     display:flex;
     flex-direction: column;
     align-items: top;

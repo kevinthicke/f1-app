@@ -12,10 +12,10 @@ export default class App extends Component {
       <Router>
         <div className={styles.App}>
           <Header/>
-          <Route exact path="/" component={Home}/>
-          <Route path="/home" component={Home}/>
-          <Route path ="/qualifyingresults" component={QualifyingResults}/>
-          <Route path ="/driversinformation" component={DriversInformation}/>
+          <Route exact path="/" component={QualifyingResults}/>
+          <Route exact path="/home" component={Home}/>
+          <Route exact path ="/qualifyingresults" component={QualifyingResults}/>
+          <Route exact path ="/driversinformation" component={DriversInformation}/>
         </div>
       </Router>  
     );
