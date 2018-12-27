@@ -8,7 +8,7 @@
     grid-template-columns: 1fr 4fr;
 }
 
-.position{
+.position {
     height: 80px;
     width: 100px;
     /* fallback for old browsers */
@@ -60,6 +60,6 @@ a {
     color:black
 }
 
-a:hover{
+a:hover {
     text-shadow:0 0 1pt white;
 }
