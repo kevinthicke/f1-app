@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+.RaceInfo {
+    font-family: 'Oswald', sans-serif;
+    font-size: 24pt;
+    display:flex;
+    justify-content: center;
+    margin-top:15px;
+    margin-bottom: 30px;
+}
+
+.QualifyingResults {
+    display:flex;
+    flex-direction: column;
+    align-items: top;
+}

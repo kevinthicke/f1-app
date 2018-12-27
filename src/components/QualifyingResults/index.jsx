@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import fetch from 'node-fetch';
+
 import RaceInfo from './RaceInfo';
-import ResultList from './ResultList';
+import ResultList from './ResultList/';
+import * as styles from './styles.css'
 
 const restricData = (data) => {
     const { 
@@ -51,7 +53,7 @@ export default class QualifyingResults extends Component {
     render() {
         const { season, raceName, QualifyingResults: fullQualifyingResults} = this.state;
         return (
-            <div>
+            <div className={styles.QualifyingResults}>
                 <RaceInfo season={season} raceName={raceName}/>
                 {
                     fullQualifyingResults ? <ResultList fullQualifyingResults={fullQualifyingResults}/> : "...loading"

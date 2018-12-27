@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Source+Sans+Pro');
+
+.ResultItem {
+    margin:5px;
+    width: 550px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 4fr;
+}
+
+.position{
+    height: 80px;
+    width: 100px;
+    /* fallback for old browsers */
+    background: #0F2027;  
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, #203A43, #0F2027);  
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #203A43, #0F2027); 
+    font-family: 'Dancing Script', cursive;
+    font-size: 30pt;
+    font-weight: bold;
+    color:white;
+    border-radius: 3px;
+    margin-right:10px;
+    grid-row: span 3;
+    grid-column: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.name, .nationality, .number {
+    font-family: 'Source Sans Pro', sans-serif;
+    display: flex;
+    font-size: 12pt;
+    align-items: center;
+    margin-right: 5px;
+    background: #0F2027;  
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, gray, white);  
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, gray, white); 
+    margin:1px;
+    border-radius: 2px;
+}
+
+
+span {
+    margin-right: 10px;
+    margin-left: 5px;
+}
