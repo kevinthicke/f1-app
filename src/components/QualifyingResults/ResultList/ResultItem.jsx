@@ -4,7 +4,7 @@ import * as styles from './styles.css';
 
 const ResultItem = ( { result }) => {
     const { number, position, familyName, url, givenName, nationality } = result;
-    console.log(url)
+    
     return (
         <div className={styles.ResultItem}>
             <div className={styles.position}> { position} </div> 

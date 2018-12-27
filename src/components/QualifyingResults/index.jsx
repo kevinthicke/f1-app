@@ -1,31 +1,10 @@
 import React, { Component } from 'react';
 import fetch from 'node-fetch';
 
-import RaceInfo from './RaceInfo';
+import RaceHeader from './RaceHeader';
 import ResultList from './ResultList/';
 import * as styles from './styles.css'
-
-const restricData = (data) => {
-    const { 
-            MRData: { 
-                RaceTable: { 
-                    Races: [
-                        {
-                            season, 
-                            raceName,
-                            QualifyingResults
-                        }
-                    ]
-                }
-            }
-        } = data;
-
-    return ({
-        season,
-        raceName,
-        QualifyingResults
-    });       
-}
+import { restricApiData } from './utils/restrictData';
 
 
 export default class QualifyingResults extends Component {
@@ -46,7 +25,7 @@ export default class QualifyingResults extends Component {
         const response = fetch('http://ergast.com/api/f1/2008/qualifying.json').then(response => response.json());
         
         response.then(data => {
-            this.setState(restricData(data))
+            this.setState(restricApiData(data))
         });
     }
 
@@ -58,9 +37,10 @@ export default class QualifyingResults extends Component {
 
     render() {
         const { season, raceName, QualifyingResults: fullQualifyingResults} = this.state;
+        
         return (
             <div className={styles.QualifyingResults}>
-                <RaceInfo season={season} raceName={raceName}/>
+                <RaceHeader season={season} raceName={raceName}/>
                 { this.showResultList(fullQualifyingResults) }
             </div>
         );
