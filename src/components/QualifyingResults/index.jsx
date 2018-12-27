@@ -50,15 +50,18 @@ export default class QualifyingResults extends Component {
         });
     }
 
+    showResultList(data) {
+        if(data) {
+            return <ResultList fullQualifyingResults={data}/>
+        } else return "... Loading";
+    }
+
     render() {
         const { season, raceName, QualifyingResults: fullQualifyingResults} = this.state;
         return (
             <div className={styles.QualifyingResults}>
                 <RaceInfo season={season} raceName={raceName}/>
-                {
-                    fullQualifyingResults ? <ResultList fullQualifyingResults={fullQualifyingResults}/> : "...loading"
-                }
-                
+                { this.showResultList(fullQualifyingResults) }
             </div>
         );
     }
