@@ -3,14 +3,14 @@ import { MdLocationCity, MdPermIdentity } from 'react-icons/md';
 import * as styles from './styles.css';
 
 const ResultItem = ( { result }) => {
-    const { number, position, driverId, familyName, givenName, nationality } = result;
-    
+    const { number, position, familyName, url, givenName, nationality } = result;
+    console.log(url)
     return (
         <div className={styles.ResultItem}>
             <div className={styles.position}> { position} </div> 
             <div className={styles.name}> 
                 <span> <MdPermIdentity/> </span> 
-                <span> { `${givenName} ${familyName}` } </span>
+                <a href={url}> { `${givenName} ${familyName}` } </a>
             </div>
             <div className={styles.number}> { number } </div>   
             <div className={styles.nationality}>

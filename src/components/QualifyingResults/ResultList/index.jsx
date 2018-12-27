@@ -4,18 +4,19 @@ import ResultItem from './ResultItem';
 const restricQualifyingResults = (fullQualifyingResults) => {
     
     return fullQualifyingResults.map( fullQualifyingResult => {
+        console.log(fullQualifyingResult)
         const { 
             number, 
             position, 
             Driver: { 
-                driverId,
+                url,
                 familyName, 
                 givenName, 
                 nationality 
             }
         } = fullQualifyingResult;
         
-        return ({ number, position, driverId, familyName, givenName, nationality })
+        return ({ number, position, url, familyName, givenName, nationality })
     });
 }
 

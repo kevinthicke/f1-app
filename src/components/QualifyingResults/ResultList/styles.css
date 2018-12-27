@@ -46,7 +46,17 @@
 }
 
 
-span {
+a, span {
     margin-right: 10px;
     margin-left: 5px;
+}
+
+a {
+    text-decoration: none;
+    outline: 0;
+    color:black
+}
+
+a:hover{
+    text-shadow:0 0 1pt white;
 }
